@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base{
+  body{
+    color: #fff;
+    background-color:#000;
+  }
+}
+
+@layer components {
+  .menuLink {
+      @apply cursor-pointer hover:text-[#c5c5];
+  } 
+
+  .tags{
+    background-color:#0abde3;
+    margin-right: 0.5rem;
+    margin-top:0.5rem;
+    padding: 3px 10px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .tags:last-child {
+      margin-right:0
+  }
+
+  .tags:nth-child(1) {
+      background-color:#a55eea;
+  }
+
+  .tags:nth-child(2) {
+      background-color:#ccea5e;
+  }
+
+  .tags:nth-child(3) {
+      background-color:#eaad5e;
+  }
+
+  .tags:nth-child(4) {
+      background-color:#a55e;
+  }
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 45px;
+}
+
+.btn-box a.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 100%;
+  background: var(--hover-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.8s;
+  box-shadow: var(--neon-box-shadow);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+a.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient( rgb(238, 85, 179), rgb(86, 86, 226));
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.4s;
+}
+
+a.btn:hover::before {
+  width: 100%;
+}
+
+a.btn:nth-child(2) {
+  background: var(--bg-color);
+  color: var(--hover-color);
+}
+
+a.btn:nth-child(2)::before {
+  background: linear-gradient( rgb(238, 85, 179), rgb(86, 86, 226));
+}
+
+
+}
